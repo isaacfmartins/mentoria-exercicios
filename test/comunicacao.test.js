@@ -1,5 +1,4 @@
 const {comunicacaoDosAnimais} = require('../src/comunicacao.js');
-const { expect } = require('chai');
 const assert = require('assert');
 
 const animais = {
@@ -17,23 +16,22 @@ const comoSeComunicamOsAnimais = comunicacaoDosAnimais('não sei');
 
 describe('Teste de comunicação dos animais', () => {
     it('Cachorro deve comunicar "au au"', () => {
-        // expect(comunicacaoDosAnimais('cachorro')).to.equal('au au');
-        assert.strictEqual(comunicacaoDosAnimais('cachorro'), 'au au');
+        assert.strictEqual(comunicacaoDosAnimais('cachorro'), animais.cachorro);
     });
 
     it('Gato deve comunicar "miau"', () => {
-        expect(comunicacaoDosAnimais('gato')).to.equal('miau');
+        assert.strictEqual(comunicacaoDosAnimais('gato'), animais.gato);
     });
 
     it('Vaca deve comunicar "muu"', () => {
-        expect(comunicacaoDosAnimais('vaca')).to.equal('muu');
+        assert.strictEqual(comunicacaoDosAnimais('vaca'), animais.vaca);
     });
 
     it('Ovelha deve comunicar "meee"', () => {
-        expect(comunicacaoDosAnimais('ovelha')).to.equal('meee');
+        assert.strictEqual(comunicacaoDosAnimais('ovelha'), animais.ovelha);
     });
 
     it('Animal desconhecido deve comunicar "Não conheço esse animal"', () => {
-        expect(comunicacaoDosAnimais('não sei')).to.equal('Não conheço esse animal');
+        assert.strictEqual(comunicacaoDosAnimais('não sei'), 'Não conheço esse animal');
     });
 });
