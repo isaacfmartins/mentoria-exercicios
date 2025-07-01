@@ -13,9 +13,6 @@ function comunicacaoDosAnimais(nomeDoAnimal){
 
 }
 
-// const aninal = comunicacaoDosAnimais("cachorro");
-// console.log(aninal); // "au au"
-
 module.exports = {
     comunicacaoDosAnimais
 }
